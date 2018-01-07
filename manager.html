@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>认识ajax</title>
@@ -15,10 +16,17 @@
             height: 30px;
             border: 1px solid blue;
         }
+
     </style>
 </head>
 
 <body>
+    <div id="header">
+        姓名：<input type="text" id="name" /> 联系方式:
+        <input type="text" id="call" /> 年龄：
+        <input type="text" id="age" />
+        <input type="button" id="addUser" value="添加用户" />
+    </div>
     <table border="1" cellspacing="0" cellpadding="0" id="tab">
         <tr id="clone">
             <th>书名</th>
@@ -26,12 +34,13 @@
             <th>数量</th>
             <th>出版社</th>
             <th>单价</th>
+            <th> </th>
         </tr>
     </table>
     <script>
         /* 
-            $.ajax()
-            */
+                    $.ajax()
+                    */
         /*
         $.ajax({
         url:
@@ -47,7 +56,7 @@
         $.ajax({
             url: "books.json",
             dataType: "json",
-            
+
             success: function(data, textStatus) {
                 console.log("--成功--");
                 //data -- 请求成功的相应数据 responseText
@@ -77,11 +86,14 @@
                 tds[2].innerHTML = data.result.list[i].count;
                 tds[3].innerHTML = data.result.list[i].publish;
                 tds[4].innerHTML = data.result.list[i].price;
+                tds[5].innerHTML = '<button id="deleatUser" class="but">删除</button>'
                 tab.appendChild(newTr);
-                
+
                 //innerhtml
             }
         }
+
     </script>
 </body>
+
 </html>
