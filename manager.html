@@ -32,7 +32,7 @@
         <input type="text" id="pub" /> 
         单价：
         <input type="text" id="money" />
-        <input type="button" id="addBook" value="添加图书" />
+        <input type="button" id="addBook" class="add" value="添加图书" />
     </div>
     <table border="1" cellspacing="0" cellpadding="0" id="tab">
         <tr id="clone">
@@ -112,6 +112,25 @@
             console.log("eeeee");
             $(this).parent().parent().remove();
         }
+     
+        
+        //增加某图书信息
+          $("#header").on("click",".add",ad);
+            function ad(){
+                console.log("aaaa");
+                var $newt = $("table tr:first").clone(true);
+            
+		$newt.children("th:first").html($("#name").val());
+		$newt.children("th:eq(1)").html($("#au").val());
+		$newt.children("th:eq(2)").html($("#num").val());
+        $newt.children("th:eq(3)").html($("#pub").val());
+		$newt.children("th:eq(4)").html($("#money").val());
+                $newt.children("th:eq(5)").html('<button id="deleteB" class="but">删除</button>');
+		$newt.appendTo("table");
+		$("input:text").val("");
+            }
+            
+            
         });
 
     </script>
