@@ -31,7 +31,7 @@
         <input type="button" id="addBook" class="add" value="添加图书" />
     </div>
     <div id="find">
-        <input type="text" class="txtx"><input type="button" value="搜索" class="butt">
+        <input type="text" class="txtx" id="tex"><input type="button" value="搜索" class="butt">
     </div>
     <table border="1" cellspacing="0" cellpadding="0" id="tab" class="tabb">
 
@@ -83,10 +83,21 @@
                 $(document).ready(function() {
                     
                           
-                    //搜索图书信息
+                  
+                //搜索图书信息
                 $("#find").on("click",".butt",ser);
                     function ser(){
                         console.log("find");
+                        var text = $("#tex").val();
+                        console.log(text);
+                        var len=data.result.list.length;
+                        console.log(len);
+                      //  console.log(data.result.list[1].bookname);
+                       for(var i=0;i<len;i++){
+                            if(text==data.result.list[i].bookname){
+                                alert("书名:  "+data.result.list[i].bookname+"\n作者:  "+data.result.list[i].author+"\n数量:  "+data.result.list[i].count+"\n出版社:  "+data.result.list[i].publish+"\n价格:  "+data.result.list[i].price);
+                            }
+                        }
                     }
 
                     
