@@ -30,8 +30,8 @@
         <input type="text" id="money" />
         <input type="button" id="addBook" class="add" value="添加图书" />
     </div>
-    <div id="find">
-        <input type="text" class="txtx" id="tex"><input type="button" value="搜索" class="butt">
+     <div id="find">
+       书名：<input type="text" class="txtx" id="tex" >作者名：<input type="text" class="txtx" id="tex2">出版社：<input type="text3" class="txtx" id="tex3" ><input type="button" value="搜索" class="butt">
     </div>
     <table border="1" cellspacing="0" cellpadding="0" id="tab" class="tabb">
 
@@ -90,11 +90,20 @@
                         console.log("find");
                         var text = $("#tex").val();
                         console.log(text);
+                         var text2 = $("#tex2").val();
+                        var text3 = $("#tex3").val();
                         var len=data.result.list.length;
                         console.log(len);
                       //  console.log(data.result.list[1].bookname);
-                       for(var i=0;i<len;i++){
+                        for(var i=0;i<len;i++){
                             if(text==data.result.list[i].bookname){
+                                alert("书名:  "+data.result.list[i].bookname+"\n作者:  "+data.result.list[i].author+"\n数量:  "+data.result.list[i].count+"\n出版社:  "+data.result.list[i].publish+"\n价格:  "+data.result.list[i].price);
+                           
+                            }
+                           if(text2==data.result.list[i].author){
+                                alert("书名:  "+data.result.list[i].bookname+"\n作者:  "+data.result.list[i].author+"\n数量:  "+data.result.list[i].count+"\n出版社:  "+data.result.list[i].publish+"\n价格:  "+data.result.list[i].price);
+                            }
+                           if(text3==data.result.list[i].publish){
                                 alert("书名:  "+data.result.list[i].bookname+"\n作者:  "+data.result.list[i].author+"\n数量:  "+data.result.list[i].count+"\n出版社:  "+data.result.list[i].publish+"\n价格:  "+data.result.list[i].price);
                             }
                         }
