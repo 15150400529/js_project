@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>认识ajax</title>
+    <title>图书管理系统 15150400529刘玲俊</title>
     <script type="text/javascript" src="jquery.js"></script>
     <style>
         table {
@@ -31,7 +31,7 @@
         <input type="button" id="addBook" class="add" value="添加图书" />
     </div>
     <div id="find">
-        <input type="text" class="txt"><input type="button" value="搜索" class="butt">
+        <input type="text" class="txtx"><input type="button" value="搜索" class="butt">
     </div>
     <table border="1" cellspacing="0" cellpadding="0" id="tab" class="tabb">
 
@@ -81,6 +81,16 @@
 
 
                 $(document).ready(function() {
+                    
+                          
+                    //搜索图书信息
+                $("#find").on("click",".butt",ser);
+                    function ser(){
+                        console.log("find");
+                    }
+
+                    
+                    
                     //删除图书信息
 
                     $("#tab").on("click", ".but", de);
