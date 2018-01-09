@@ -31,7 +31,7 @@
         <input type="button" id="addBook" class="add" value="添加图书" />
     </div>
      <div id="find">
-       书名：<input type="text" class="txtx" id="tex" >作者名：<input type="text" class="txtx" id="tex2">出版社：<input type="text3" class="txtx" id="tex3" ><input type="button" value="搜索" class="butt">
+       <input type="text" class="txtx" id="tex" placeholder="请输入书名/作者/出版社" ><input type="button" value="搜索" class="butt">
     </div>
     <table border="1" cellspacing="0" cellpadding="0" id="tab" class="tabb">
 
@@ -98,15 +98,20 @@
                         for(var i=0;i<len;i++){
                             if(text==data.result.list[i].bookname){
                                 alert("书名:  "+data.result.list[i].bookname+"\n作者:  "+data.result.list[i].author+"\n数量:  "+data.result.list[i].count+"\n出版社:  "+data.result.list[i].publish+"\n价格:  "+data.result.list[i].price);
+                                $("#tex").val("");
+                                
                            
                             }
-                           if(text2==data.result.list[i].author){
+                           if(text==data.result.list[i].author){
                                 alert("书名:  "+data.result.list[i].bookname+"\n作者:  "+data.result.list[i].author+"\n数量:  "+data.result.list[i].count+"\n出版社:  "+data.result.list[i].publish+"\n价格:  "+data.result.list[i].price);
+                               $("#tex").val("");
                             }
-                           if(text3==data.result.list[i].publish){
+                           if(text==data.result.list[i].publish){
                                 alert("书名:  "+data.result.list[i].bookname+"\n作者:  "+data.result.list[i].author+"\n数量:  "+data.result.list[i].count+"\n出版社:  "+data.result.list[i].publish+"\n价格:  "+data.result.list[i].price);
+                               $("#tex").val("");
                             }
                         }
+                      
                     }
 
                     
