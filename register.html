@@ -2,52 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
-    <title>注册</title>
-    <script type="text/javascript" src="jquery.js"></script>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-
-        #box {
-            text-align: center;
-            position: relative;
-        }
-
-        #re {
-            margin: auto;
-            position: absolute;
-            top: 15%;
-            left: 19%;
-
-        }
-
-        img {
-            margin-left: -50%;
-            margin-top: -6%;
-            width: 50%;
-        }
-
-        #word {
-            display: block;
-            margin-top: -50%;
-            font-size: 200%;
-            margin-left: 35%
-        }
-
-        #kuang {
-            
-        }
-
-      
-        
-     .shu {
-            width: 20%;
+    <title>Document</title>
+     <script type="text/javascript" src="jquery.js"></script>
+       <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+       <style>
+           #kuang{
+               background-color: #fafafa;
+               height: 600px;
+               margin-top: 15%;
+               padding-left: 0;
+           }
+           img{
+               margin-top: -8%;
+               margin-left: 3%;
+              
+           }
+           h2{
+               margin-top: 30%;
+               padding-left: 10px;
+           }
+           .shu{
+             
             color: #888;
 
-            padding: 0px 0px 0px 5px;
+            
             border: 1px solid #C5E2FF;
             background: #FBFBFB;
             outline: 0;
@@ -57,75 +35,76 @@
             height: 40px;
             display: inline-block;
             line-height: 25px;
-            margin-left: 50%;
-        
-        
-padding-bottom: 5px;
-        
-
-
-        }
-        #shu1{
-            margin-top: 3%;
-            margin-bottom: 1%;
-        }
-        #shu2{
-           
-        }
-        #user{
-         padding-left: 22%;
-            margin-top: 4%;
-            position: absolute;
-            left: 37%;
-        }
-         #pass{
-         padding-left: 22%;
-            margin-top: 13px;
-            position: absolute;
-            left: 37%;
-        }
+           margin-bottom: 5%;
+          padding-bottom: 5px;
+               
+               
+             
+           }
+           #shu1{
+                margin-top: 5%; 
+           }
+           p{
+               display: inline-block;
+               
+              
+               
+               
+           }
+           .kuai{
+               margin-left: 5%;
+           }
+           #p2{
+               margin-top: 3%;
+               
+           }
+           #p1{
+               margin-top: 7%;
+           }
+           button{
+               height: 40px;
+           }
     </style>
 </head>
-
 <body>
     <div id="box">
-
-        <div id="re">
-            <img src="libr.png" alt="">
-            <div id="kuang">
-                <span id="word">注册</span>
-                  <p id="user">用户名</p>
-                 <input type="text" id="shu1" class="shu">
-               <p id="pass">密&nbsp;&nbsp;&nbsp;码</p>
-                <input type="password" id="shu2" class="shu"> 
-               
-
+        <div class="container">
+            <div class="col-md-12" id="kuang">
+               <div class="col-md-7" style="background-color: #f2f6f8; padding-left: 0;height: 600px;">
+                   <img src="libr.png" alt="" class="img-responsive col-md-offset-1 col-md-10">
+               </div>
+               <div class="col-md-5">
+                   <h2 class="text-center">注册</h2>
+                   <div class="col-md-10 kuai">
+                   <p class="col-md-3 text-right " id="p1">用户名</p>
+                    <input type="text" id="shu1" class="shu col-md-8 ">
+             <p class="col-md-3 text-right" id="p2">密&nbsp;&nbsp;&nbsp;码</p>
+                <input type="password" id="shu2" class="shu col-md-8 ">
+                 <p class="col-md-3 text-right" id="p2">邮&nbsp;&nbsp;&nbsp;箱</p>
+                <input type="password" id="shu2" class="shu col-md-8 ">
+                <button class="btn btn-primary col-md-8 col-md-offset-3">注册</button>
+                </div>
+               </div>
             </div>
         </div>
     </div>
-
-
-
-
-    <script>
-        var wid = $(window).width();
+    
+    
+    
+    
+    
+    
+    
+      <script>
+   // var wid = $(window).width();
         var hei = $(window).height();
-        console.log(wid);
+       // console.log(wid);
         console.log(hei);
         $("#box").css({
             "background-color": "#58bdff",
-            "width": wid,
+            //"width": wid,
             "height": hei
         });
-        $("#re").css({
-            "background-color": "#fdfcfc",
-            "width": "60%",
-            "height": "70%"
-        })
     </script>
 </body>
-
-
-
-
 </html>
