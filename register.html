@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>图书管理系统注册</title>
+    <title>Document</title>
      <script type="text/javascript" src="jquery.js"></script>
        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
        <style>
@@ -141,6 +141,14 @@
            #deng{
                display: none;
            }
+           
+           #su2{
+               margin-left: 27%;
+               margin-top: 30%;
+           }
+           #tu{
+               display: none;
+           }
        ::-webkit-input-placeholder { color:#d3d6d7; }
 :-ms-input-placeholder { color:#d3d6d7; }
     </style>
@@ -208,6 +216,14 @@
                 
                 
             </div>
+            
+<!--      登陆成功提示      -->
+            <div class="col-md-5 img-responsive" id="tu">
+                    <img src="ds.png" alt="" id="su2">
+                    
+                </div>
+            
+            
         </div>
     </div>
     
@@ -288,6 +304,8 @@
                     console.log(len);
                    for(var i=0;i<len;i++){if(shu4==data.result.list[i].username&&shu5==data.result.list[i].password){
                         console.log("success");
+                        $("#deng").hide();
+                        $("#tu").show();
                     }else{
                         console.log("fa");
                     }
