@@ -10,9 +10,20 @@
         table {
             width: 500px;
             height: 100px;
+            background-color: white;
+            opacity:0.9;
+            text-align: center;
         }
 
-
+        .but{
+            background-color: transparent;
+            border: none;
+            color: blue;
+        }
+        .but:hover{
+            text-decoration: underline;
+            color: red;
+        }
         #tab {
             margin-top: 2%
         }
@@ -31,6 +42,7 @@
         #num,
         #money {
             width: 10%;
+           
         }
 
         .add {
@@ -44,8 +56,11 @@
 </head>
 
 <body>
+   <div id="box">
     <div class="container">
+      <h1 style="position: absolute;top: 10%;left: 45%;">图书管理系统</h1>
         <div id="header">
+           
             <div class="col-md-12">
                 <form class="form-inline">
                     <div class="form-group">
@@ -67,9 +82,9 @@
         </div>
         <div id="find" class="col-md-4 col-md-offset-8">
             <div class="col-md-10" style="margin-left: -7px;">
-                <input type="text" class="txtx form-control" id="tex">
+                <input type="text" class="txtx form-control" id="tex" placeholder="请输入想要查找的书名/作者名/出版社">
             </div>
-            <input type="button" value="搜索" class="butt btn btn-primary">
+            <input type="button" value="搜索" class="butt btn btn-primary" >
 
         </div>
         <div class="col-md-12">
@@ -92,7 +107,7 @@
         </div>
     </div>
 
-
+</div>
     <script>
         $.ajax({
             url: "books.json",
@@ -219,6 +234,16 @@
             }
 
         })
+        
+         var hei = $(window).height();
+        // console.log(wid);
+        console.log(hei);
+        $("#box").css({
+            "background-image":"url(gi.jpg)",
+            "background-size":"100%",
+            //"width": wid,
+            "height": hei
+        });
     </script>
 
 

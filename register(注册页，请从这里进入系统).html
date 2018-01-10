@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>图书管理系统注册页</title>
     <script type="text/javascript" src="jquery.js"></script>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
     <style>
@@ -182,7 +182,7 @@
         <div class="container">
             <div class="col-md-12" id="kuang">
                 <div class="col-md-7" style="background-color: #f2f6f8; padding-left: 0;height: 600px;">
-                    <img src="libr.png" alt="" class="img-responsive col-md-offset-1 col-md-10">
+                    <img src="./sucai/libr.png" alt="" class="img-responsive col-md-offset-1 col-md-10">
                 </div>
 
                 <!--     注册框          -->
@@ -215,7 +215,7 @@
                 </div>
 
                 <div class="col-md-5 img-responsive">
-                    <img src="success.png" alt="" id="su">
+                    <img src="./sucai/success.png" alt="" id="su">
 
                 </div>
 
@@ -243,7 +243,7 @@
 
                 <!--      登陆成功提示      -->
                 <div class="col-md-5 img-responsive" id="tu">
-                    <img src="ds.png" alt="" id="su2">
+                    <img src="./sucai/ds.png" alt="" id="su2">
 
                 </div>
 
@@ -325,8 +325,13 @@
                               
                                 setTimeout(function(){console.log("jump");
                                      location.href="manager.html";                      }, 600);
+                              
                             } else {
+                                  if(shu4==""||shu5==""){
+                                    alert("请将用户名和密码填写完整");
+                                }else{
                                 console.log("fa");
+                                alert("登录失败");}
                             }
                         }
 
