@@ -240,7 +240,13 @@
                             alert("请完善图书信息，任何信息不得为空");
                             console.log("afaf");
                         }
+                        
                         else{
+                            if(parseInt(count)<0){
+                            alert("图书数量不能为负");
+                                
+                        }
+                            else{
                         var txt2 = "<tr><td>" + bookname + "</td><td>" + author + "</td><td>" + count + "</td><td>" + publish + "</td><td>" + price + '' + "</td><td>" + '<button id="deleteB" class="but">删除</button>' + "</td></tr>";
                         $(".tabb").append(txt2);
                         data.result.list.push({
@@ -251,7 +257,13 @@
                             price
                         });
                         console.log(data.result.list);
+                            $("#name").val("");
+                            $("#au").val("");
+                            $("#num").val("");
+                            $("#pub").val("");
+                            $("#money").val("");
                     }
+                        }
                     }
 
                 });
