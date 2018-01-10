@@ -109,8 +109,8 @@
                 })
 
 
-
-
+var obj=data.result.list;
+                console.log(obj);
 
 
 
@@ -168,19 +168,16 @@
 
                     function ad() {
                      
-                        var name = $("#name").val();
-                        var au = $("#au").val();
-                        var num = $("#num").val();
-                        var pub = $("#pub").val();
-                        var money = $("#money").val();
-                        console.log(name);
-                        console.log(au);
-                        console.log(num);
-                        console.log(pub);
-                        console.log(money);
-                        var txt2 = "<tr><td>" + name + "</td><td>" + au + "</td><td>" + num + "</td><td>" + pub + "</td><td>" + money + '' + "</td><td>" + '<button id="deleteB" class="but">删除</button>' + "</td></tr>";
+                        var bookname = $("#name").val();
+                        var author = $("#au").val();
+                        var count = $("#num").val();
+                        var publish = $("#pub").val();
+                        var price = $("#money").val();
+                  
+                        var txt2 = "<tr><td>" + bookname + "</td><td>" + author + "</td><td>" + count + "</td><td>" + publish + "</td><td>" + price + '' + "</td><td>" + '<button id="deleteB" class="but">删除</button>' + "</td></tr>";
                         $(".tabb").append(txt2);
-
+                         data.result.list.push({bookname,author,count,publish,price});
+                        console.log(data.result.list);
                     }
 
                 });
