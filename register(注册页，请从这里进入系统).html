@@ -194,7 +194,7 @@
                         <p class="col-md-3 text-right" id="p2">密&nbsp;&nbsp;&nbsp;码</p>
                         <input type="password" id="shu2" class="shu col-md-8 ">
                         <p class="col-md-3 text-right" id="p2">邮&nbsp;&nbsp;&nbsp;箱</p>
-                        <input type="password" id="shu3" class="shu col-md-8 ">
+                        <input type="email" id="shu3" class="shu col-md-8 ">
                         <button class="btn btn-primary col-md-8 col-md-offset-3" onclick="hid()">注册</button>
 
 
@@ -269,11 +269,26 @@
         });
 
         function hid() {
+              
+            
+             var shu1 = $("#shu1").val();
+            var shu2 = $("#shu2").val();
+            var shu3 = $("#shu2").val();
+            
+            if(shu1==""||shu2==""||shu3==""){
+                                    alert("请将注册信息填写完整");
+                                }
+            else{
+        
             $("#zi").hide();
             $("#loader").hide();
             $("#su").show();
             setTimeout("hid2()", 600);
-        }
+              
+               
+            }
+                }
+       
 
         function hid2() {
             $("#su").hide();
