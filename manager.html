@@ -190,7 +190,12 @@
                         var count = $("#num").val();
                         var publish = $("#pub").val();
                         var price = $("#money").val();
-
+                       
+                        if(bookname==""||author==""||count==""||publish==""||price==""){
+                            alert("请完善图书信息，任何信息不得为空");
+                            console.log("afaf");
+                        }
+                        else{
                         var txt2 = "<tr><td>" + bookname + "</td><td>" + author + "</td><td>" + count + "</td><td>" + publish + "</td><td>" + price + '' + "</td><td>" + '<button id="deleteB" class="but">删除</button>' + "</td></tr>";
                         $(".tabb").append(txt2);
                         data.result.list.push({
@@ -201,6 +206,7 @@
                             price
                         });
                         console.log(data.result.list);
+                    }
                     }
 
                 });
