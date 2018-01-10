@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>图书管理系统 15150400529刘玲俊</title>
+     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
     <script type="text/javascript" src="jquery.js"></script>
     <style>
         table {
@@ -16,11 +17,19 @@
             height: 30px;
             border: 1px solid blue;
         }
-
+  #tab{
+            margin-top: 2%
+        }
+        #find{
+          
+            padding-right: 0;
+        }
+      
     </style>
 </head>
 
 <body>
+   <div class="container">
     <div id="header">
         书名：
         <input type="text" id="name" /> 作者:
@@ -30,10 +39,16 @@
         <input type="text" id="money" />
         <input type="button" id="addBook" class="add" value="添加图书" />
     </div>
-     <div id="find">
-       <input type="text" class="txtx" id="tex" placeholder="请输入书名/作者/出版社" ><input type="button" value="搜索" class="butt">
+    <div id="find" class="col-md-4 col-md-offset-8">
+      <div class="col-md-10" style="margin-left: -7px;">
+       <input type="text" class="txtx form-control" id="tex" >
+       </div>
+       <input type="button" value="搜索" class="butt btn btn-primary">
+       
     </div>
-    <table border="1" cellspacing="0" cellpadding="0" id="tab" class="tabb">
+    <div class="col-md-12">
+    <div class="table-responsive">
+    <table border="1" cellspacing="0" cellpadding="0" id="tab" class="tabb table table-hover ">
 
         <tr id="clone">
             <td>书名</td>
@@ -47,6 +62,9 @@
 
         </tbody>
     </table>
+    </div>
+       </div>
+    </div>
 
 
     <script>
