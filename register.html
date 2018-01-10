@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>注册</title>
      <script type="text/javascript" src="jquery.js"></script>
        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
        <style>
@@ -252,6 +252,32 @@
              $("#su").hide();
              $("#deng").show();
          }
+          
+        //引入json数据 用户数据
+          
+           $.ajax({
+            url: "user.json",
+            dataType: "json",
+
+            success: function(data) {
+
+                //data -- 请求成功的相应数据 responseText
+
+                console.log(data);
+
+                $.each(data.result.list, function(index, item) {
+                    console.log(item.username);
+                    console.log(item.password);
+                    var username = item.username;
+                    var password =item.password;
+                   
+                })
+                
+                 }
+           })
+
+                
+                
     </script>
 </body>
 </html>
